@@ -1,5 +1,6 @@
 import express from "express";
 import dayjs from "dayjs"
+import planetsRoutes from './routes/planets-routes.js';
 
 const app = express();
 //const dayjs = dayjs();
@@ -52,5 +53,5 @@ app.get("/math/:operator", (req, res) => {
     res.send(c + "\n Les choix sont: sum, sus, mul, div, mod et pow")
 });
 
-
+app.use('/planets',planetsRoutes);
 export default app;
